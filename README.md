@@ -1,5 +1,6 @@
 ***Test Case cho màn hình đăng nhập***
 
+
 **Mã testcase**: ID_1
 
 **Mục đích kiểm thử**: Kiểm tra đăng nhập với tài khoản hợp lệ  
@@ -20,6 +21,7 @@
 
 **Trạng thái**: Pass / Fail
 
+
 **Mã testcase**:ID_2
 
 **Mục đích kiểm thử**: Kiểm tra khi để trống email hoặc mật khẩu
@@ -36,6 +38,7 @@
 - Hiển thị thông báo lỗi: "Invalid email or password. Please try again."
   
 **Trạng thái**: Pass/ Fail
+
 
 **Mã testcase**:ID_3
 
@@ -54,6 +57,7 @@
   
 **Trạng thái**: Pass/ Fail
 
+
 **Mã testcase**:ID_4
 
 **Mục đích kiểm thử**: Kiểm tra nút icon ẩn, hiện mật khẩu
@@ -70,6 +74,7 @@
 - Icon chuyển thành 'eye-off-outline'
 
 **Trạng thái**: Pass/ Fail
+
 
 **Mã testcase**:ID_5
 
@@ -90,6 +95,7 @@
 
 **Trạng thái**: Pass/ Fail
 
+
 **Mã testcase**:ID_6
 
 **Mục đích kiểm thử**: Kiểm tra điều hướng khi người dùng ấn vào "Create an Account"
@@ -105,6 +111,7 @@
 - Màn hình Register hiển thị đầy đủ các trường thông tin đăng ký
 
 **Trạng thái**: Pass/ Fail
+
 
 **Mã testcase**:ID_7
 
