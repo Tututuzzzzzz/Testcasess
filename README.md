@@ -9,6 +9,7 @@
 1. Nhập email `test@gmail.com` vào ô email
 2. Nhập mật khẩu `123456` vào ô mật khẩu
 3. Nhấn nút "LOG IN"
+   
 **Kết quả mong muốn**:
 - Hiển thị Alert "Login Successful"
 - Điều hướng đến màn hình Home
