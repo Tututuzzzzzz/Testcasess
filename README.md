@@ -4,7 +4,7 @@
 **Mục đích kiểm thử**: Kiểm tra đăng nhập với tài khoản hợp lệ  
 **Dữ liệu đầu vào**:  
 - Email: `test@example.com`  
-- Password: `123456`  
+- Password: `123456`
 **Các bước thực hiện**:
 1. Nhập email `test@gmail.com` vào ô email
 2. Nhập mật khẩu `123456` vào ô mật khẩu
