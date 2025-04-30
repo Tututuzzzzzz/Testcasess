@@ -68,22 +68,19 @@
 **Trạng thái**: Pass / Fail
 
 
-**Mã testcase**: ID_5
+**Mã testcase**:ID_5
 
-**Mục đích kiểm thử**: Kiểm tra đăng nhập với tài khoản hợp lệ  
+**Mục đích kiểm thử**: Kiểm tra nút icon ẩn, hiện mật khẩu
 
 **Dữ liệu đầu vào**:
-- Email: `test@example.com`  
-- Password: `123456`
-
+- Password: '123456'
+  
 **Các bước thực hiện**:
-1. Nhập email `test@gmail.com` vào ô email
-2. Nhập mật khẩu `123456` vào ô mật khẩu
-3. Nhấn nút "LOG IN"
-   
-**Kết quả mong muốn**:
-- Hiển thị Alert "Login Successful"
-- Điều hướng đến màn hình Home
-- Lưu accessToken và user vào AsyncStorage
+1. Nhập mật khẩu với dữ liệu đầu vào 
+2. Nhấn icon 'eye-outline'
 
-**Trạng thái**: Pass / Fail
+**Kết quả mong muốn**:
+- Mật khẩu hiển thị rõ
+- Icon chuyển thành 'eye-off-outline'
+
+**Trạng thái**: Pass/ Fail
