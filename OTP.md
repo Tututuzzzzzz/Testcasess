@@ -1,62 +1,9 @@
-***Test case màn hình xác thực OTP***
-
-**Mã testcase**: ID_1
-
-**Mục đích kiểm thử**: Kiểm tra hệ thống khi người dùng nhập đúng mã OTP 6 chữ số 
-
-**Dữ liệu đầu vào**: Mã OTP hợp lệ được gửi qua email
-
-**Các bước thực hiện**:
-1. Mở màn hình nhập mã OTP
-2. Nhập đầy đủ 6 chữ số OTP hợp lệ được gửi về email của bạn
-3. Nhấn nút Verify
-   
-**Kết quả mong muốn**:
-- Thông báo: Xác minh OTP thành công!
-- Điều hướng màn hình về màn hình Login
-
-
-
-**Mã testcase**: ID_2
-
-**Mục đích kiểm thử**: Kiểm tra hệ thống phản hồi khi người dùng nhập thiếu mã OTP
-
-**Dữ liệu đầu vào**: Không có 
-
-**Các bước thực hiện**:
-1. Nhập ít hơn 6 chữ số (ví dụ: 123)
-2. Nhấn nút Verify
-   
-**Kết quả mong muốn**:
-- Hiển thị cảnh báo: Vui lòng nhập đủ 6 chữ số OTP
-- Không gọi API, không chuyển trang 
-
-
-**Mã testcase**: ID_3
-
-**Mục đích kiểm thử**: Kiểm tra người dùng không thể nhập ký tự không hợp lệ (chữ cái, kí hiệu, ...)
-
-**Dữ liệu đầu vào**: Không có
-
-**Các bước thực hiện**:
-1. Cố gắng nhập ký tự như 'a', '@', '-' vào ô OTP
-   
-**Kết quả mong muốn**:
-- Các ký tự không hợp lệ và bị từ chối
-- Chỉ nhận các chữ số (0-9)
-
-
-**Mã testcase**: ID_4
-
-**Mục đích kiểm thử**: Kiểm tra tính năng tự động chuyển sang ô tiếp theo hoặc quay lại ô trước
-
-**Dữ liệu đầu vào**: Không có 
-
-**Các bước thực hiện**:
-1. Nhập số vào từng ô -> COn trỏ tự chuyển sang ô tiếp theo
-2. Xóa một ô -> Con trỏ trở về ô trước đó
-   
-**Kết quả mong muốn**:
-- Điều hướng con trỏ mượt mà đúng như logic đã xử lý
-
-
+| **Mã Testcase** | **Mục đích kiểm thử**                              | **Dữ liệu đầu vào**            | **Các bước thực hiện**                                              | **Kết quả mong muốn**                                                                                       | **Trạng thái** |
+| --------------- | -------------------------------------------------- | ------------------------------ | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | -------------- |
+| ID\_1           | Kiểm tra nhập đúng mã OTP hợp lệ                   | Mã OTP 6 số đúng gửi qua email | 1. Mở màn hình OTP<br>2. Nhập đúng 6 số OTP<br>3. Nhấn "Verify"     | - Hiển thị thông báo: "Xác minh OTP thành công!"<br>- Điều hướng về màn hình Login                          | Pass / Fail    |
+| ID\_2           | Kiểm tra nhập thiếu mã OTP                         | Ví dụ: 123                     | 1. Nhập ít hơn 6 chữ số<br>2. Nhấn "Verify"                         | - Hiển thị: "Vui lòng nhập đủ 6 chữ số OTP"<br>- Không gọi API, không chuyển trang                          | Pass / Fail    |
+| ID\_3           | Kiểm tra không cho nhập ký tự không hợp lệ         | Ký tự: 'a', '@', '-'           | 1. Nhập ký tự không hợp lệ vào ô OTP                                | - Ký tự bị từ chối<br>- Chỉ cho phép nhập số (0-9)                                                          | Pass / Fail    |
+| ID\_4           | Kiểm tra chuyển ô tự động khi nhập và xóa          | -                              | 1. Nhập số -> tự chuyển sang ô sau<br>2. Xóa -> tự quay lại ô trước | - Di chuyển con trỏ đúng logic khi nhập và xóa ký tự                                                        | Pass / Fail    |
+| ID\_5           | Kiểm tra nút 'Gửi lại mã' khi hết 60 giây          | -                              | 1. Chờ hết 60s<br>2. Nhấn "Gửi lại mã"                              | - OTP gửi lại thành công<br>- Đồng hồ reset về 60s<br>- Hiển thị: "Mã OTP đã được gửi lại về email của bạn" | Pass / Fail    |
+| ID\_6           | Kiểm tra ngăn gửi lại OTP trước thời gian quy định | -                              | 1. Nhấn "Gửi lại mã" khi đồng hồ đang đếm                           | - Nút bị vô hiệu hóa<br>- Không gọi API                                                                     | Pass / Fail    |
+| ID\_7           | Kiểm tra phản hồi khi nhập sai mã OTP              | Nhập sai mã OTP                | 1. Nhập đủ 6 số sai<br>2. Nhấn "Verify"                             | - Hiển thị cảnh báo: "Xác minh OTP thất bại" từ API                                                         | Pass / Fail    |
