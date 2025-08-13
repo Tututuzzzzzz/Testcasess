@@ -34,27 +34,27 @@ Học có giám sát là phương pháp huấn luyện mô hình từ dữ liệ
 
 ### Các chỉ số đánh giá
 
-- **Accuracy**:
+- **Accuracy**  
 \[
 \text{Accuracy} = \frac{\text{Số dự đoán đúng}}{\text{Tổng số mẫu}}
 \]
 
-- **Precision**:
+- **Precision**  
 \[
 \text{Precision} = \frac{TP}{TP + FP}
 \]
 
-- **Recall**:
+- **Recall**  
 \[
 \text{Recall} = \frac{TP}{TP + FN}
 \]
 
-- **F1-Score**:
+- **F1-Score**  
 \[
 F1 = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
 \]
 
-- **Mean Squared Error (MSE)**:
+- **Mean Squared Error (MSE)**  
 \[
 \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
 \]
